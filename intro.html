@@ -1,22 +1,52 @@
 <html>
+
 <head>
     <title>"Jidegren 2019"</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Sans" rel="stylesheet">
 </head>
 
 <body>
-    <h1 id="minRubrik">Välkommen till vår bröllopssida</h1>
-    <h2>#Jidegren2019</h2>
-    <p>Mer info kommer snart...</p>
+    <div id="intro">
+        <h1 id="minRubrik">Välkommen till vår bröllopssida</h1>
+        <h2>#Jidegren2019</h2>
+        <p>MER INFO KOMMER SNART...</p>
+    </div>
 
 
+    <div id="tid">
+        <button onclick="changeHeaderText()">Tryck här för att se hur lång tid det är kvar..</button>
 
-    <button onclick="changeHeaderText()">Tryck här för att se hur lång tid det är kvar..</button>
+        <p id="tidKvar"></p>
 
-    <p id="tidKvar"></p>
+    </div>
+
+    <h2>O.S.A</h2>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Coming</th>
+        </tr>
+        <tr>
+            <td>Eddy</td>
+            <td>Kronberg</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Rickard</td>
+            <td>Bäck</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Oskar</td>
+            <td>Karlström</td>
+            <td>No</td>
+        </tr>
+    </table>
 
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
