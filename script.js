@@ -22,6 +22,12 @@ function printOutInConsole() {
     console.log('Hej i consolen');
 }
 
+function changeHeaderColor() {
+    document.getElementById("minRubrik").style.color = "red";
+    document.getElementById("minRubrik").style.fontSize = "100px";
+
+}
+
 let knapp2 = document.getElementById("knapp02");
 knapp2.addEventListener("click", printSomething);
 
@@ -32,6 +38,9 @@ let knapp5 = document.getElementById("knapp05");
 knapp5.addEventListener("click", () => {
     console.log('Femte knappen nu..');
 });
+
+let knapp06b = document.getElementById("knapp06b");
+knapp06b.addEventListener("click", changeHeaderColor);
 
 //istället för click kan man köra andra kommandon typ tex mouseover, mouseleave
 
