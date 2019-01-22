@@ -9,15 +9,16 @@ function changeHeaderText() {
     displayTimeLeft = !displayTimeLeft;
     if(displayTimeLeft)
     {
-        document.getElementById("tidKvar").style.display = "block";
+        document.getElementById("tidKvar").innerHTML = "Mindre än fyra månader kvar!";
     }
     else
     {
-        document.getElementById("tidKvar").style.display = "none";
+        document.getElementById("tidKvar").innerHTML = "";
     }
 
 }
 changeHeaderText();
+
 //annat sätt:
 // let tidKvar = document.getElementById("tidKvar");
 // tidKvar.innerText = "Ännu mindre än fyra månader kvar!";
