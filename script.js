@@ -1,12 +1,26 @@
 //window.alert('Välkommen till vår bröllopssida!');
 
-function changeHeaderText() {
-    document.getElementById("tidKvar").innerHTML = "Mindre än fyra månader kvar!";
-}
 
+let tidKvarKnapp = document.getElementById("tidKvarKnapp");
+let displayTimeLeft = true;
+tidKvarKnapp.addEventListener("click", changeHeaderText);
+
+function changeHeaderText() {
+    displayTimeLeft = !displayTimeLeft;
+    if(displayTimeLeft)
+    {
+        document.getElementById("tidKvar").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("tidKvar").style.display = "none";
+    }
+
+}
+changeHeaderText();
 //annat sätt:
-let tidKvar = document.getElementById("tidKvar");
-tidKvar.innerText = "Ännu mindre än fyra månader kvar!";
+// let tidKvar = document.getElementById("tidKvar");
+// tidKvar.innerText = "Ännu mindre än fyra månader kvar!";
 
 //innerText tolkar bokstavligt till skillnad från innerHTML
 
@@ -42,15 +56,25 @@ knapp5.addEventListener("click", () => {
 let knapp06b = document.getElementById("knapp06b");
 knapp06b.addEventListener("click", changeHeaderColor);
 
+
+
+
+
+
+
+
+
+
+
 //istället för click kan man köra andra kommandon typ tex mouseover, mouseleave
 
-//Olika sätt att göra funktioner:
-function testy() {
-    alert('xx')
-}
-testy();
+// //Olika sätt att göra funktioner:
+// function testy() {
+//     alert('xx')
+// }
+// testy();
 
-let testy2 = () => alert('xxxxx');
-testy2(); //Går att testa i browsern också
+// let testy2 = () => alert('xxxxx');
+// testy2(); //Går att testa i browsern också
 
 

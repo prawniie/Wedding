@@ -16,6 +16,16 @@ h1 {
     padding: 20px;
 }
 
+button {
+    padding: 10px;
+    margin: 10px;
+    display: block;
+}
+
+#tidKvarKnapp {
+    display:inline-block;
+    
+}
 
 table {
     border-collapse: collapse;
