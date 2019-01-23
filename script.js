@@ -1,81 +1,26 @@
-//window.alert('Välkommen till vår bröllopssida!');
+let countDownDate = new Date("May 18, 2019 16:00:00").getTime();
 
+// Update the count down every 1 second
+let x = setInterval(function() {
 
-let tidKvarKnapp = document.getElementById("tidKvarKnapp");
-let displayTimeLeft = true;
-tidKvarKnapp.addEventListener("click", changeHeaderText);
+  let now = new Date().getTime();
 
-function changeHeaderText() {
-    displayTimeLeft = !displayTimeLeft;
-    if(displayTimeLeft)
-    {
-        document.getElementById("tidKvar").innerHTML = "Mindre än fyra månader kvar!";
-    }
-    else
-    {
-        document.getElementById("tidKvar").innerHTML = "";
-    }
+  let distance = countDownDate - now;
 
-}
-changeHeaderText();
+  // Time calculations for days, hours, minutes and seconds
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-//annat sätt:
-// let tidKvar = document.getElementById("tidKvar");
-// tidKvar.innerText = "Ännu mindre än fyra månader kvar!";
+  // Display the result in the element with id="tidKvar"
+  document.getElementById("tidKvar").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
 
-//innerText tolkar bokstavligt till skillnad från innerHTML
-
-//changeHeaderText(); kan också kalla på en funktion bara
-
-//console.log för att skriva ut saker 
-
-function printSomething() {
-    alert('Hej');
-}
-
-function printOutInConsole() {
-    console.log('Hej i consolen');
-}
-
-function changeHeaderColor() {
-    document.getElementById("minRubrik").style.color = "red";
-    document.getElementById("minRubrik").style.fontSize = "100px";
-
-}
-
-let knapp2 = document.getElementById("knapp02");
-knapp2.addEventListener("click", printSomething);
-
-let knapp4 = document.getElementById("knapp04");
-knapp4.addEventListener("click", printOutInConsole);
-
-let knapp5 = document.getElementById("knapp05");
-knapp5.addEventListener("click", () => {
-    console.log('Femte knappen nu..');
-});
-
-let knapp06b = document.getElementById("knapp06b");
-knapp06b.addEventListener("click", changeHeaderColor);
-
-
-
-
-
-
-
-
-
-
-
-//istället för click kan man köra andra kommandon typ tex mouseover, mouseleave
-
-// //Olika sätt att göra funktioner:
-// function testy() {
-//     alert('xx')
-// }
-// testy();
-
-// let testy2 = () => alert('xxxxx');
-// testy2(); //Går att testa i browsern också
-
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("tidKvar").innerHTML = "Party is on!";
+  }
+}, 1000);
 

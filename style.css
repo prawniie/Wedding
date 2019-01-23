@@ -10,10 +10,17 @@ h1 {
     display: inline-block;
 }
 
-#intro, #tid {
-    text-align: center;
+#intro {
     border: 1px solid black;
-    padding: 20px;
+}
+
+.jumbotron, #tid {
+    text-align: center;
+    padding: 30px;
+}
+
+#minRubrik {
+    font-size: 48px;
 }
 
 button {
@@ -25,13 +32,4 @@ button {
 #tidKvarKnapp {
     display:inline-block;
     
-}
-
-table {
-    border-collapse: collapse;
-}
-
-td {
-    border: 1px solid black;
-    padding: 10px;
 }
