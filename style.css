@@ -4,6 +4,10 @@
     
 }
 
+body {
+    background-color:#f6fffa;
+}
+
 h1 {    
     font-family: 'Great Vibes', cursive;
     font-size: 36px;
@@ -17,6 +21,9 @@ h1 {
 .jumbotron, #tid {
     text-align: center;
     padding: 30px;
+    background-color: white;
+    color: #46a79e;
+    /* color: #ffc5d1; */
 }
 
 #minRubrik {
